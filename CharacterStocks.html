@@ -1,0 +1,101 @@
+<!DOCTYPE HTML>
+<!--
+	Hyperspace by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Character Stock Market</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<img width="40" height="40" src="images/crest.png"/>
+				<a href="index.html" class="title"> Character Stock Market</a>
+				<nav>
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="PianoQuiz.html">Piano Quiz</a></li>
+						<li><a href="Redungeon.html">Re:Dungeon</a></li>
+						<li><a href="FacTwory.html">Fac-Two-ry</a></li>
+						<li><a href="CharacterStocks.html"class="active">Character Stock Market</a></li>
+					</ul>
+				</nav>
+			</header>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<section id="main" class="wrapper">
+						<div class="inner">
+							<h1 class="major">Character Stock Trader</h1>
+							<span class="image fit"><iframe class="image fit" frameborder="0" src="https://radiant-stocks-web.vercel.app/dashboard" height="400" allowfullscreen="" title="trader integrated website" ></iframe></span>
+							<p>Its a little hard to explain how this came to be. So i'll leave the story for the last and just explain what this is and how it works (you wont be able to log in through the embed right now sorry)</p>
+							<p>The "RBOW Stock Ticker" is a discord application programmed in python that takes simulates a stock market based around fictional characters in real time with extrnal website integration and integration with another independant discord application
+							to do this it:
+								<br>- Creates user accounts based off their discord id
+								<br>- Allows for user purchases using discord slash commands
+								<br>- Tracks user purchases and stock ammounts
+								<br>- Calculates stock prices based off currently owned stock and intrest
+								<br>- Shares this data with the external website</p>
+
+							<span class="image fit"><img src="images\CharacterStockDisImage.png" alt="" /></span>
+
+							<p>Now to explain why this exists and the whole story behind the making of it.
+							<br> 
+							<br> 
+							I have to explain "agenda posting" and the webnovel "Radiant Blade of the Wilderness". 
+							To be quick about it "agenda posting" is what people on the internet call the "my dad would beat up your dad" or "Spider-Man would beat Iron-Man" or "Messi is better than Ronaldo" arguments kids have in primary school, but its called "agenda posting" to seperate us from those kids so we can pretend we arent doing the exact same thing. 
+							
+							<br>
+							<br>Now thats out of the way, the author of the "Lord of the Mysteries" series "Cuttlefishthatlovesdiving" released his newest series "Radiant Blade of the Wilderness" (RBOW) in June of 2026. I am a fan of his previous works, so i decided to read the newest one. Searching for somewhere to discuss the book i found the RBOW discord server, 
+							the first volume ended and the second volume was slated to release 3 days later, i made a joke about setting up an application to allow people to bet on the success of each character in a stock market, the idea of "character stocks" was a popular one in agenda posting spaces; character does well and stock goes up, they do poorly and stock goes down.
+							this was originally just a joke, but then i found that i was given permission and it was announced that i would be making this thing, so i obviously had no choice but to make it in the three days before the new volume came out; but i had no idea how to make a discord application and i hadn't used python in 4 years because while studying for my bachelors degree i only used C#, C++, HTML and Javascript.
+							So i got to work, mostly learning how the disord application api worked and remembering how python was written, finished programming it in 2 days, the third day was spent fixing bugs and logic issues; removing infinite money glitches, curbing exploitative tactics etc. In the end i was left with a discord only application that did what it was meatnt to and nothing much more. 
+							But there was more left in store for me, someone in the server had set up a website to more easily display what was a text based application, all that was needed was for the bot to send the information from its databases to the website and its set. but I had done nothing but program this for 3 days straight, i was tired and so i tasked the guy who made the website with figuring out integration.
+							<br>
+							LOL
+							<br>
+							He sent me his code, i plugged it in and it worked fine on my machine, because i could run two the sync script and the applications script simultaneously, the hosting site i was using could not do that, tried running the sync script through the main applications code, also didnt work. Eventually i had time to look at the sync code he'd sent me, lol, entirely ai generated 
+							the reason i couldnt run the sync script through the main code was because the sync script contained a forever loop and so it just stopped the main code, actually it was constantly sending data to the website every second when the website data only needed to be updated when the database was updated. I was so annoyed, anyway i ended up turning it into a library and having the website data update on transactions and account editing.
+							<br>
+							works much better
+							</p>
+
+						</div>
+						
+					</section>
+
+			</div>
+
+		<!-- Footer -->
+			<footer id="footer" class="wrapper alt">
+				<div class="inner">
+					<ul class="menu">
+						<li><a href="index.html">Home</a></li>
+						<li><a href="PianoQuiz.html">Piano Quiz</a></li>
+						<li><a href="Redungeon.html">Re:Dungeon</a></li>
+						<li><a href="FacTwory.html">Fac-Two-ry</a></li>	
+						<li><a href="CharacterStocks.html">Character Stock Market</a></li>					
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
